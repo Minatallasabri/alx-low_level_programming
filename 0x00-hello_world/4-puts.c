@@ -1,4 +1,3 @@
-#!/bin/bash
 #icloud<stdio.h>
 /**
  * main - Entry point 
