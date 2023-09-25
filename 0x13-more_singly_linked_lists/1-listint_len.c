@@ -12,7 +12,7 @@ size_t q = 0;
 	while (h)
 	{
 		h = h->next;
-		q++:
+		q++;
 	}
 	return (q);
 }
