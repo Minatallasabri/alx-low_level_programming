@@ -15,7 +15,7 @@ int f_exists(const char *filename);
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, n, c = 0;
+	int fd, n, m = 0;
 
 	if (!filename)
 		return (-1);
@@ -30,10 +30,10 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		while (text_content[c])
-			c++;
+		while (text_content[m])
+			m++;
 
-		n = write(fd, text_content, c);
+		n = write(fd, text_content, m);
 		if (n == -1)
 			return (-1);
 	}
