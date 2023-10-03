@@ -1,5 +1,4 @@
-#include "main.h "
-
+include "main.h"
 
 int f_exists(const char *filename);
 
@@ -16,11 +15,12 @@ int f_exists(const char *filename);
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, n, m = 0;
+	int fd, n, c = 0;
 
 	if (!filename)
 		return (-1);
 
+	/* Checks if file does not exist */
 	if (!f_exists(filename))
 		return (-1);
 
@@ -30,26 +30,10 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		while (text_content[m])
-			m++;
+		while (text_content[c])
+			c++;
 
-		n = write(fd, text_content, m);
+		n = write(fd, text_content, c);
 		if (n == -1)
 			return (-1);
 	}
-
-	close(fd);
-	return (1);
-}
-
-/**
-* f_exists - checks if a file exists
-* @filename: the name of the file
-* Return: returns a non-zero number if it exists and 0 otherwise
-*/
-int f_exists(const char *filename)
-{
-	struct stat buffer;
-
-	return (stat(filename, &buffer) == 0);
-}
