@@ -21,7 +21,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	/* Checks if file does not exist */
 	if (!f_exists(filename))
 		return (-1);
 
