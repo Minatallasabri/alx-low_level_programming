@@ -1,7 +1,7 @@
 # C - Makefiles:
-   This task about Making files :
+   This task about Makefiles :
+
  # Learning Objectives :
- 
 * What are make, Makefiles.
 * When and why and how to use Makefiles.
 * What are rules and how to set and use them.
