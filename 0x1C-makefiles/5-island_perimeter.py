@@ -23,4 +23,4 @@ def island_perimeter(grid):
                     lands += 1
                 if (i > 0 and grid[i - 1][j] == 1):
                     lands += 1
-    return size * 4 - lands * 2
+    return size * 4 - lands *2
