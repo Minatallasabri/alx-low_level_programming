@@ -24,10 +24,10 @@ int jump_search(int *array, size_t size, int value)
 	prev_index = 0;
 	curr_index = 0;
 
-	while (currt_index < (int)size && array[curr_index] < value)
+	while (curr_index < (int)size && array[curr_index] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n",
-			curr_index, array[curre_index]);
+			curr_index, array[curr_index]);
 		prev_index = curr_index;
 		curr_index += jump_step;
 	}
