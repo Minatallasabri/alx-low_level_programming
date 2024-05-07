@@ -73,3 +73,4 @@ int exponential_search(int *array, size_t size, int value)
 	printf("Value found between indexes [%ld] and [%ld]\n", left, right);
 	return (binary_searching(array, left, right, value));
 }
+
